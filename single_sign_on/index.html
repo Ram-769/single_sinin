@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        button#continueButton {
+            background-color: #28a745;
+            color: white;
+        }
+
+        button#continueButton:hover {
+            background-color: #218838;
+        }
+
+        button.social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        button.social-button:hover {
+            background-color: #f1f1f1;
+        }
+
+        button.social-button img.icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        hr {
+            margin: 20px 0;
+            border: none;
+            border-top: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <h1>Welcome to payment gateway log</h1>
+        <h5>Create an account</h5>
+        <form id="accountForm">
+            <input type="email" id="email" placeholder="Email address" required>
+            <button type="button" id="continueButton">Continue</button>
+        </form>
+        <p>Already have an account? <a href="#">Login</a></p>
+        <hr> -->
+        <button class="social-button" id="continueButton">
+            <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                alt="Google" class="icon">  -->
+                Continue with Google
+        </button>
+        <button class="social-button" id="microsoftButton">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png"
+                alt="Microsoft" class="icon"> Continue with Microsoft Account
+        </button>
+        <button class="social-button" id="appleButton">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/512px-Apple_logo_black.svg.png"
+                alt="Apple" class="icon">
+                 Continue with Apple
+        </button>
+    </div>
+    <script>
+
+        // document.getElementById('continueButton').addEventListener('click', function () {
+        //     const email = document.getElementById('email').value;
+        //     alert('Continue with email: ' + email);
+        // });
+
+        document.getElementById('continueButton').addEventListener('click', function () {
+            window.location.href = 'http://localhost:4001/auth/google';
+        });
+
+        document.getElementById('microsoftButton').addEventListener('click', function () {
+            alert('Continue with Microsoft Account');
+        });
+
+        document.getElementById('appleButton').addEventListener('click', function () {
+            alert('Continue with Apple');
+        });
+
+    </script>
+</body>
+
+</html>
